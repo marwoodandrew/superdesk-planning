@@ -334,6 +334,8 @@ class AssignmentsService(superdesk.Service):
                         PlanningNotifications().notify_assignment(target_desk=assigned_to.get('desk'),
                                                                   message='assignment_reassigned_3_msg',
                                                                   meta_message='assignment_details_email',
+                                                                  coverage_type=get_coverage_type_name(coverage_type),
+                                                                  slugline=slugline,
                                                                   assignee=assignee,
                                                                   client_url=client_url,
                                                                   assignment_id=assignment_id,
